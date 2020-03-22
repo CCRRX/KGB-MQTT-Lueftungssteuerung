@@ -16,6 +16,11 @@ Benötigte Eingänge:
 * SpareIn 1
 * SpareIn 2
 
+Handbuch VLT3500  
+
+
+TODO: Hartbeat mit einbauen.  
+
 $ mosquitto_pub -h 192.168.178.128 -t "inTopic" -m "1"  
 $ mosquitto_pub -h 192.168.178.128 -t "inTopic" -m "0"  
 
