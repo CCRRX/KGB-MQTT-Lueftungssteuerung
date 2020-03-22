@@ -1,9 +1,21 @@
 # KGB-MQTT-Lueftungssteuerung
 KGB MQTT Lueftungssteuerung mit einem Arduino Nano und passendem Ethernet Shield
 
-Frequenzumrichter shille eintragen!
-
 Hier ein paar Notizen für mich:  
+
+Benötigte Ausgänge:  
+* Start/Stop
+* Geschwindigkeitsbit 1
+* Geschwindigkeitsbit 2
+* Geschwindigkeitsbit 3
+* SpareOut 1
+* SpareOut 2
+
+Benötigte Eingänge:
+* Fehler
+* SpareIn 1
+* SpareIn 2
+
 $ mosquitto_pub -h 192.168.178.128 -t "inTopic" -m "1"  
 $ mosquitto_pub -h 192.168.178.128 -t "inTopic" -m "0"  
 
