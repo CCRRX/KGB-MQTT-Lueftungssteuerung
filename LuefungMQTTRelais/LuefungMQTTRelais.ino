@@ -30,7 +30,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
     }
     msg[length] = '\0';
     
-    if(strcmp(msg,"00")==0){
+/*    if(strcmp(msg,"00")==0){
       digitalWrite(RelayPin0, HIGH);}
     
     if (strcmp(msg,"01")==0){
@@ -77,6 +77,44 @@ void callback(char* topic, byte* payload, unsigned int length) {
     
     if (strcmp(msg,"71")==0){
       digitalWrite(RelayPin7, LOW);}
+      */
+
+    if(strcmp(msg,"00")==0){
+        digitalWrite(RelayPin0, HIGH);
+        digitalWrite(RelayPin1, HIGH);
+        digitalWrite(RelayPin2, HIGH);
+        digitalWrite(RelayPin3, LOW);
+    }
+    else if(strcmp(msg,"10")==0){
+        digitalWrite(RelayPin0, LOW);
+        digitalWrite(RelayPin1, HIGH);
+        digitalWrite(RelayPin2, HIGH);
+        digitalWrite(RelayPin3, LOW);      
+    }
+    else if(strcmp(msg,"20")==0){
+        digitalWrite(RelayPin0, LOW);
+        digitalWrite(RelayPin1, LOW);
+        digitalWrite(RelayPin2, HIGH);
+        digitalWrite(RelayPin3, LOW);      
+    }
+    else if(strcmp(msg,"30")==0){
+        digitalWrite(RelayPin0, LOW);
+        digitalWrite(RelayPin1, HIGH);
+        digitalWrite(RelayPin2, LOW);
+        digitalWrite(RelayPin3, LOW);      
+    }
+    else if(strcmp(msg,"50")==0){
+        digitalWrite(RelayPin0, LOW);
+        digitalWrite(RelayPin1, LOW);
+        digitalWrite(RelayPin2, LOW);
+        digitalWrite(RelayPin3, LOW);      
+    }
+        else if(strcmp(msg,"AUS")==0){
+        digitalWrite(RelayPin0, HIGH);
+        digitalWrite(RelayPin1, HIGH);
+        digitalWrite(RelayPin2, HIGH);
+        digitalWrite(RelayPin3, HIGH);      
+    }
 }
 
 
