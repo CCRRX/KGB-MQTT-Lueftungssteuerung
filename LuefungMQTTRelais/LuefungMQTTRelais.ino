@@ -5,7 +5,7 @@
 
 byte mac[]    = {  0xDE, 0xED, 0xBA, 0xFE, 0xFE, 0xED }; // Best MAC ^^
 IPAddress ip(192, 168, 178, 177);
-IPAddress server(192, 168, 178, 128);
+IPAddress server(192, 168, 178, 112);
 
 const int RelayPin0 = 2;
 const int RelayPin1 = 3;
